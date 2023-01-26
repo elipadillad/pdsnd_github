@@ -22,7 +22,7 @@ def get_user_inputs(prompt, valid_input):
     return value
 
 def load_data(city, month, day):
-   
+   """function for using the data in csv files """
  # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
     # convert the Start Time column to datetime
@@ -163,6 +163,7 @@ def main():
            
         df = load_data(city, month, day)
         
+# Show of statistics   
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
